@@ -27,7 +27,9 @@ const getAddressNFTs = async (endpoint, owner, contractAddress, retryAttempt) =>
 const fetchNFTs = async (owner, setNFTs, contractAddress) => {
     let endpoint = "https://eth-rinkeby.alchemyapi.io/v2/GXdaB56MZ5ko2VRwwrUe1rWl1Bi8til4"
     const data = await getAddressNFTs(endpoint, owner, contractAddress)
-    if (data.ownedNfts.length) {
+    if (!data) {
+        setNFTs(null)
+    } else if(data.ownedNfts.length){
         const NFTs = await getNFTsMetadata(data.ownedNfts, endpoint)
         console.log("NFTS metadata", NFTs)
         let fullfilledNFTs = NFTs.filter(NFT => NFT.status == "fulfilled")

@@ -10,7 +10,7 @@ const Marketplace = () => {
 
     return (
         <div className='marketplace'>
-            <button onClick={() => {fetchNFTs(contractAddress, setNFTs, contractAddress)}}>Search</button>
+            <button onClick={() => {fetchNFTs(window.ethereum.selectedAddress, setNFTs, contractAddress)}}>Search</button>
 
             <section>
                 {
