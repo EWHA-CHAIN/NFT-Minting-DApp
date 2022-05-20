@@ -25,7 +25,7 @@ const getAddressNFTs = async (endpoint, owner, contractAddress, retryAttempt) =>
 
 //NFT 데이터 반환하기
 const fetchNFTs = async (owner, setNFTs, contractAddress) => {
-    let endpoint = "https://eth-rinkeby.alchemyapi.io/v2/GXdaB56MZ5ko2VRwwrUe1rWl1Bi8til4"
+    let endpoint = process.env.REACT_APP_ALCHEMY_KEY
     const data = await getAddressNFTs(endpoint, owner, contractAddress)
     if (!data) {
         setNFTs(null)
