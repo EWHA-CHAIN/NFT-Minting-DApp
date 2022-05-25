@@ -3,6 +3,10 @@
 
 컨트랙트 배포부터, 프론트엔드 개발까지 담고 있습니다.
 
+<img src="ppt/ewhabootmain.jpeg"  width="500">
+
+
+
 ## 파일 설명
 contracts : 컨트랙트들을 담고 있습니다.
 
