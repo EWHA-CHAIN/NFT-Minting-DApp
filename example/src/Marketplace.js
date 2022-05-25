@@ -6,7 +6,7 @@ require("dotenv").config();
 const Marketplace = () => {
 
     const [NFTs, setNFTs] = useState("")
-    const contractAddress = /*컨트랙트 주소 작성*/
+    const contractAddress = "0xfCBB2fe41635A68F36a5C6744D89CdC49BaE7c89"
 
     return (
         <div className='marketplace'>
